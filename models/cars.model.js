@@ -4,18 +4,19 @@ const CarSchema = mongoose.Schema({
     name: {type: String, required: true, unique: true, index: true}
 }, {collection : 'Car'});
 
-let CarsModel = mongoose.model('Car', CarSchema);
+let Model = mongoose.model('Car', CarSchema);
 
-CarsModel.getAll = () => {
-    return CarsModel.find({});
+Model.getList = () => {
+    return Model.find({});
 }
 
-CarsModel.addCar = (carToAdd) => {
-    return carToAdd.save();
+Model.add = (data) => {
+    return data.save();
 }
 
-CarsModel.removeCar = (carName) => {
-    return CarsModel.remove({name: carName});
+Model.delete = (name) => {
+    return Model.remove({name},(err)=>console.log(err));
 }
+Model.getOne = (name)=>{return Model.findOne({name});}
 
-export default CarsModel;
+export default Model;

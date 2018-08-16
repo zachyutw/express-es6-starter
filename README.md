@@ -1,5 +1,5 @@
-# express-es6-starter
-
+# Express Starter 2018
++ fork from git+https://github.com/tomyitav/express-es6-starter.git
 Starter project for creating a MVC express server, using
 
 + express
@@ -9,12 +9,8 @@ Starter project for creating a MVC express server, using
 + Async/Await
 
 ## Installation
-
-Clone the repository and run `npm install`
-
-```
-git clone https://github.com/tomyitav/express-es6-starter.git
-npm install
+```bash
+yarn
 ```
 
 ## Starting the server
@@ -42,3 +38,18 @@ Instructions about running the container are available [here](https://hub.docker
 
 Set babel-node executable as the node interpreter.
 Pass node parameters of --preset=babel-preset-es2015
+
+---
+
+# Skeleton (new)
++ contorllers
++ core
++ data
++ models
++ db
++ routes
++ server.js
++ Dockerfile
++ log
+
+
